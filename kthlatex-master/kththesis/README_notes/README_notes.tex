@@ -1,0 +1,568 @@
+
+
+
+% \newacronym[⟨options⟩]{⟨label⟩}{⟨abbrv⟩}{⟨long⟩}
+%\newglossaryentry{⟨label⟩}{type=\acronymtype,
+%name={⟨abbrv⟩},
+%description={⟨long⟩},
+%text={⟨abbrv⟩},
+%first={⟨long⟩ (⟨abbrv⟩)},
+%plural={⟨abbrv⟩s},
+%firstplural={⟨long⟩s (⟨abbrv⟩s)},
+%⟨options⟩}
+
+%\newacronym{API}{API}{Application Programming Interface}
+\newglossaryentry{tld:API}{type=readme,
+name={API},
+description={Application Programming Interface},
+text={API},
+first={Application Programming Interface (API)},
+plural={APIs},
+firstplural={Application Programming Interfaces (APIs)},
+}
+\newglossaryentry{tld:DiVA}{type=readme, name={DiVA}, description={Digitala Vetenskapliga Arkivet},
+first={Digitala Vetenskapliga Arkivet (DiVA)}}
+\newglossaryentry{tld:IMRAD}{type=readme, name={IMRAD}, description={Introduction, Methods, Results, and Discussion},
+first={Introduction, Methods, Results, and Discussion (IMRAD)}}
+\newglossaryentry{tld:JSON}{type=readme, name={JSON}, description={JavaScript Object Notation},
+first={JavaScript Object Notation (JSON)}}
+\newglossaryentry{tld:KOPPS}{type=readme, name={KOPPS}, description={Kurs- och programplaneringssystemet},
+first={Kurs- och programplaneringssystemet (KOPPS)}}
+\newglossaryentry{tld:KTH}{type=readme, name={KTH}, description={KTH Royal Institute of Technology},
+first={KTH Royal Institute of Technology (KTH)}}
+\newglossaryentry{tld:LADOK}{type=readme, name={LADOK}, description={Lokalt adb–baserat dokumentationssystem},
+first={Lokalt adb–baserat dokumentationssystem (LADOK)}}
+\newglossaryentry{tld:TIMTM}{type=readme, name={TIMTM}, description={Interactive Media Technology}
+first={Interactive Media Technology (TIMTM)}}
+\newglossaryentry{tld:TMMTM}{type=readme, name={TMMTM}, description={Media Management}
+first={Media Management (TMMTM)}}
+
+
+\lstdefinestyle{latexExample}{
+language=[LaTeX]{TeX},
+    breaklines=true,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+    basicstyle=\small\tt,
+    keywordstyle=\color{blue}\sf,
+    identifierstyle=\color{magenta},
+    commentstyle=\color{cyan},
+    backgroundcolor=\color{yellow!15},
+    tabsize=2,
+    columns=flexible,
+}
+\lstset{style=latexExample}
+\newcommand{\dname}[1]{\textbf{#1}}
+\newcommand{\fname}[1]{\footnotesize \texttt{#1}}
+
+\chapter{README and notes about the template}
+
+\glsresetall[readme]
+This document, written by Gerald Q. Maguire Jr,  describes the thesis template that I have developed for use at \gls{tld:KTH} and provides some background about why it is the way that it is. It is important to note that the template is \textbf{not prescriptive}, as not every thesis will have all of the parts that the template shows. However, if there is something that you decide to leave out, you should make a conscious decision to do so and you should consider the impact this may have on your thesis being approved by the examiner.
+
+Fundamental to the design of the template are several key factors:
+\begin{itemize}
+    \item Helping students be successful in their degree project,
+    \item Helping students produce a high-quality thesis, and
+    \item Supporting all of the (relevant) phases of the degree project process.
+\end{itemize}
+
+There are several thousand theses written each year by \gls{tld:KTH} students. Every approved thesis will be entered into \gls{tld:DiVA} (independent of whether the full text is made available via \gls{tld:DiVA}). Collecting the data necessary for \gls{tld:DiVA} was a major driving force in the design of the template. This data is useful for many of the phases of the degree project, such as announcing the oral presentation.
+    
+This template is \textbf{not} designed for use by \gls{tld:TIMTM} and \gls{tld:TMMTM} students - as students in these two programmes are using a different structure for their reports (there is another template available for them).
+
+\textbf{This document is a work in progress.}
+
+\section{Introduction}
+This template evolved (radically) from an earlier thesis template that was widely used at \gls{tld:KTH}. The direction of this evolution was based on the DOCX template that was developed over many years for use with students for whom I was the examiner and/or supervisor. The suggested structure and contents of the thesis reflect my experience as an examiner for more that 570 degree projects and the experience I have had as a teacher and examiner for the course II2202 Research Methodology and Scientific Writing. The template also reflects my interest as a member of KTH's Language Committee in facilitating the parallel use of English and Swedish at \gls{tld:KTH}, as well as supporting other languages. The latter aspect
+reflects my experience with double degree students, who often need to have at least the abstract of their thesis available in the language(s) of their home university. The thesis template also reflects
+my experience in entering the metadata for hundreds of theses into \gls{tld:DiVA} and announcing a very large number of degree project seminars.
+
+\Cref{sec:expectedUsers} describes a number of different groups of users and how the template is relevant to them.
+
+There were several major thoughts influencing the design of this template:
+\begin{enumerate}[leftmargin=*, label=\textbf{Thought \arabic*}, ref={Thought \arabic*}]
+    \item \label{thought:helpStudent} The template should help a student be successful in their degree project and help them produce a high-quality thesis in conjunction with their degree project.
+    
+    \item \label{thought:process} The template should help support all of the (relevant) phases of the degree project process.
+    
+    \item \label{thought:reducingDataEntry} Redundant data entry should be minimized in order to increase consistency.
+    
+    \item \label{thought:volume} There are several thousand theses written each year at \gls{tld:KTH}. In fact, theses are the second most common type of publication at \gls{tld:KTH}.
+    
+    \item \label{thought:inDiVA} Every approved thesis will have at least its meta data entered into \gls{tld:DiVA}. \gls{tld:DiVA} features multi-language support for title, subtitle, abstract, and keywords.
+\end{enumerate}
+
+\section{Deliminations}
+
+This template is \textbf{not} designed for use by \gls{tld:TIMTM} and Media Management \gls{tld:TMMTM} students - as students in these two programmes are using a different structure for their reports (there is another template available for them).
+
+Additionally, I have been told by one of my colleagues in applied mathematics that theses in this area generally do not follow the \gls{tld:IMRAD} structure.
+
+Some parts of the template are conditional based on the value of a switch: \texttt{\textbackslash ifinswedish}. The idea is to easily have a single template that supports theses written in English or Swedish. However, in many places the conditional has not been used, but could be. Examples of this include the Swedish names for chapters and sections. Generally this information is in a note after the English chapter or section name. More complete implementation of the use of this condition remains as future work.
+
+The template does not fully support the G5 paper format. In particular the \gls{tld:KTH} cover (produced with \texttt{\textbackslash kthcover)} and back cover (produced with \texttt{\textbackslash kthbackcover)}) have only been adapted for A4 paper. Support for G5 paper remains as future work.
+
+The handling of the subject area (Swedish: Område för examensarbete) is currently incomplete and remains as future work. Personally, I'm still struggling to understand the rules and how one knows what the correct values are (especially for cases of \first dual degrees and \second combinations of technical subjects and education degrees).
+
+\section{Structure of the files for the template}
+Table~\ref{tab:file_structure} shows structure of the files for the template. These files are generally taken either from an existing Overleaf project, a ZIP file, or a github.
+
+One hope is that by automatically extracting information from various sources, this information is more likely to be \textit{correct} and \textit{consistent} (supporting \ref{thought:reducingDataEntry}). This approach has been used to generate two of the files used for the template. These files are:
+\begin{enumerate}
+    \item The file \fname{custom\_configuration.tex} contains macros and values for configuring a project. These values are generally expected to be known at the start of the project, \eg author(s), supervisor(s). examiner, course code for the degree project program code, \etc. While this file can be manually edited, it was designed to be generate by a program that I have written that extracts most of the data from the Canvas course being used in conjunction with the degree project. One of goals of using such a program is to automatically extract data from Canvas, the \gls{tld:KTH} profile \gls{tld:API}, \gls{tld:KOPPS}, and other sources. The macros for defining this information are described in Sections \ref{sec:authorMacros}, \ref{sec:supervisorMacros}, and \ref{sec:examinerMacros} - for authors, supervisors, and examiner (respectively).
+
+    \item The file \texttt{schools\_and\_programs.ins} contains the English and Swedish names of schools and the programs. This information was extracted by a program from \gls{tld:KOPPS}.
+\end{enumerate}
+
+We will assume that these files have been generated by someone. Later we will examine who this someone might be for each of these files.
+
+\begin{table}[!ht]
+    \caption{Structure of files for the template}
+    \label{tab:file_structure}
+    \small{
+    \begin{tabular}{l l p{4cm}<{\raggedright}}
+%\textbf{Top level} & \textbf{2\textsuperscript{nd} level} & \textbf{Description} \\
+\hline
+\dname{bibstyle} & \multicolumn{2}{c}{\textbf{directory containing files related to the style of the bibliography}} \\
+{} & \fname{myIEEEtran.bst} & a bibtex style file  \\
+\hline
+\dname{figures} & \multicolumn{2}{c}{\textbf{directory containing files for figures}} \\
+\hline
+\dname{lib} & \multicolumn{2}{c}{\textbf{directory containing various library files}}  \\
+
+& \fname{acronyms.tex} & a place to define the acronyms that will or might be used \\
+
+& \fname{defines.tex} & some generally useful defines \\
+
+& \fname{includes-after-hyperref.tex} & a special include file for packages that have to be included \textbf{after} the hyperref package \\
+
+& \fname{includes.tex} & a centralized place to include packages that might be useful \\
+
+& \fname{kthcolors.tex} & defines a number of colors from the \gls{tld:KTH} palette \\
+
+& \fname{pdf\_related\_includes.tex} & includes to be able to add the title and other information to the PDF file \\
+
+& \fname{schools\_and\_programs.ins} & English and Swedish names of schools and the programs \\
+\hline
+\fname{custom\_configuration.tex} & & macros and values for configuring a project\\
+
+\fname{examplethesis.tex} & & an example of the thesis itself \\
+
+\fname{kth\_logo.png} & & the \gls{tld:KTH} logo for use on the cover \\
+
+\fname{kththesis.cls} & & the kththesis class file \\
+
+\fname{README\_notes.tex} & & these notes \\
+
+\fname{references.bib} & & references that may be cited in the thesis \\
+    \end{tabular}
+    }
+\end{table}
+%\FloatBarrier
+\clearpage
+
+
+\section{Expected users and their differences}
+\label{sec:expectedUsers}
+This template is relevant to a number of different sets of users:
+\begin{enumerate}[leftmargin=*,label=\textbf{Users \arabic*}, ref={Users \arabic*}]
+    \item \label{users:authors} Author or Authors (see \Cref{sec:authors}),
+    \item \label{users:others} Those working together with the author(s) during the degree project process (see \Cref{sec:examinerAdvisorsOpponent}),
+    \item \label{users:admins} Administrative staff working with the document after it has been approved by the examiner (see \Cref{sec:adminStaff}), and
+    \item \label{users:readers} The (hopefully) many (human) readers of the final document (see \Cref{sec:readers}).
+    \item \label{users:searchEngines} The (hopefully) many computers reading the metadata and the full text of the final document (see \Cref{sec:searchEngines}).
+    \item \label{users:maintainer} Those who are maintaing or updating this template (see \Cref{sec:maintainer}).
+\end{enumerate}
+
+Each of these different sets of users have different needs and perspectives. The following subsections describe these needs and perspectives.
+
+\section{Author or Authors}
+\label{sec:authors}
+One of the hardest problems an author faces is getting started writing, i.e., the blank sheet of paper - empty file barrier. The template provides a non-blank starting point; hence, avoiding the blank paper barrier. Additionally, the template provides some initial structure, basically an  \gls{tld:IMRAD} structure, so that there are hints of were to place material. Moreover, there are places (and notes) about material that the student should consider adding; for example, the ``required reflections'' section in the final chapter.
+
+The template also provides some examples of commonly occurring types of content, so that one can easily find examples of how to include a figure, table, code listing, etc. These examples are not meant to be exhaustive and quite often the student will probably need to learn new \LaTeX\ commands in the course of writing their thesis.
+
+\subsection{Author configuration of the template}
+\label{sec:authorConfigs}
+The template is designed to handle a thesis written in English or Swedish.
+You can set the default language to `english' or `swedish' by passing an option to the documentclass. Note that the language options is written in all lower case letters; for example, to set the document's language to English:
+\begin{lstlisting}
+\documentclass[english]{kththesis}
+\end{lstlisting}
+
+To set the document's language to Swedish:
+\begin{lstlisting}
+\documentclass[swedish]{kththesis}
+\end{lstlisting}
+
+The language option `swedish' sets the conditional \texttt{\textbackslash ifinswedish} to true.  Among many other things, this conditional is used to configure the \gls{tld:KTH} cover and the title page to use the chosen language.
+
+The two most common bibliographic engines are supported, \ie BibTeX and BibLaTeX. To set the language to English and use the bibliographic engine to BibTeX you would say:
+\begin{lstlisting}
+\documentclass[english, bibtex]{kththesis}
+\end{lstlisting}
+To set the language to Swedish and use the bibliographic engine to BibLaTeX you would say:
+\begin{lstlisting}
+\documentclass[swedish, biblatex]{kththesis}
+\end{lstlisting}
+
+The above illustrates that you can pass multiple options to the document class separated by commas. Also note that the options were passed as all lower case letters.
+
+You can of course also modify the formatting of the citations and bibliography. See for example the following code snippet:
+\small{
+\begin{lstlisting}
+\ifbiblatex
+    %\usepackage[language=english,bibstyle=authoryear,citestyle=authoryear, maxbibnames=99]{biblatex}
+    %\usepackage[style=numeric,sorting=none,backend=biber]{biblatex}
+    \usepackage[bibstyle=authoryear,citestyle=authoryear, maxbibnames=99,language=english]{biblatex}
+    % alternatively you might use another style, such as IEEE
+    %\usepackage[style=ieee]{biblatex}
+    \addbibresource{references.bib}
+    %\DeclareLanguageMapping{norsk}{norwegian}
+\else
+    % The line(s) below are for BibTeX
+    \bibliographystyle{bibstyle/myIEEEtran}
+    %\bibliographystyle{apalike}
+\fi
+\end{lstlisting}
+}
+
+To optimize for digital output (this changes the color palette) add the option: digitaloutput. There are also options for A4 or G6 paper: a4paper or g5paper (respectively). Finally, there are options for a 1\textsuperscript{st} cycle thesis or 2\textsuperscript{nd} cycle thesis: bachelor and master (respectively).
+
+One of the first things that the author(s) will want to do is add the working title and subtitle to the thesis. This is done using the \textbackslash title, \textbackslash subtitle, \textbackslash alttitle, and \textbackslash altsubtitle macros as shown below:
+\begin{lstlisting}
+\title{This is the title in the language of the thesis}
+\subtitle{An subtitle in the language of the thesis}
+
+% give the alternative title - i.e., if the thesis is in English, then give a Swedish title
+\alttitle{Detta är den svenska översättningen av titeln}
+\altsubtitle{Detta är den svenska översättningen av undertiteln}
+% alternative, if the thesis is in Swedish, then give an English title
+%\alttitle{This is the English translation of the title}
+%\altsubtitle{This is the English translation of the subtitle}   
+\end{lstlisting}
+
+Setting these values once and then using them in many places reduces the work to change them while at the same time ensuring consistency. 
+
+Some additional configuration that the author(s) might do is to set the values of the macros related to the course cycle, course code, date of the thesis, number of credits, degree/exam name, subject area, and if the degree is done external to \gls{tld:KTH} to set the host information. Consider the snippet below for a student admitted to the ``Bachelor's Programme in Information and Communication Technology (TCOMK)'' program and enrolled in the degree project course ``IA150X Degree Project in Information and Communication Technology, First Cycle 15.0 credits'' and a company ``Företaget AB'':
+\begin{lstlisting}
+\hostcompany{Företaget AB} % Remove this line if the project was not done at a host company
+
+\date{\today}
+
+\courseCycle{1}
+\courseCode{IA150X}
+\courseCredits{15.0}
+
+\programcode{TCOMK}
+\degreeName{Bachelors degree}
+% Note that the subject area for a Bachelor's thesis (Kandidatexamen)
+% should be either Technology or Architecture
+% If the thesis is in Swedish these would be: teknik | arkitektur
+% -- Note the use of lower case for the Swedish subject area
+\subjectArea{Technology}
+\end{lstlisting}
+
+Note that in the above macros you have to give the English or Swedish names in the arguments to \textbackslash degreeName and \textbackslash subjectArea - as shown below:
+\begin{lstlisting}
+\degreeName{Kandidatexamen}
+\subjectArea{teknik}
+\end{lstlisting}
+
+For a CDATE student enrolled in the course ``DA231X Degree Project in Computer Science and Engineering, Second Cycle 30.0 credits'', the cycle, program, course code, degree, and subject area information would be:
+\begin{lstlisting}
+\programcode{CDATE}
+\courseCycle{2}
+\courseCode{DA231X}
+\courseCredits{30.0}
+\degreeName{Degree of Master of Science in Engineering}
+\subjectArea{Computer Science and Engineering}
+\end{lstlisting}
+
+There are a set of rules about what is to be displayed on the \gls{tld:KTH} cover. These can be found at \url{https://www.kth.se/social/group/sprakkommitten/page/omrade-for-examensarbete/}.
+
+National subject categories are a required field in the \gls{tld:DiVA} record. These categories follow a definition by SCB and HSV. 
+While these code refer to research areas, these codes are also used in \gls{tld:KTH} to indicate the area of the thesis. The guidance that I received from the Linköping library was that one should try to use 5 digit codes when possible. Some examples of these codes are shown in Table~\ref{tab:nationalsubject categories}.
+\begin{description}[leftmargin=!, labelwidth =\widthof{\texttt{\textbackslash nationalsubjectcategories\{\}}}]
+\item [\texttt{\textbackslash nationalsubjectcategories\{\}}] comma separated list of national subject category codes - each a 3 or 5 digit code
+\end{description}
+
+An example for a thesis in Computer Science and Computer Systems:
+\begin{lstlisting}
+\nationalsubjectcategories{10201, 10206}
+\end{lstlisting}
+
+You can find the subjects and their codes in:\\ \url{https://www.scb.se/contentassets/3a12f556522d4bdc887c4838a37c7ec7/standard-for-svensk-indelning--av-forskningsamnen-2011-uppdaterad-aug-2016.pdf}\\
+and\\
+\url{https://www.scb.se/contentassets/10054f2ef27c437884e8cde0d38b9cc4/oversattningsnyckel-forskningsamnen.pdf}
+
+\begin{table}[!ht]
+  \begin{center}
+    \caption{Examples of some national subject categories and their codes}
+    \label{tab:nationalsubject categories}
+    \begin{tabular}{p{0.85cm} L{6.2cm} L{6.2cm}} % <-- Alignments: 1st column left, 2nd middle, with vertical lines in between
+      \textbf{Code}  & \textbf{Category (in Swedish)} & \textbf{Category (in English)} \\
+      \hline
+102 & Data- och informationsvetenskap (Datateknik) &   Computer and Information Sciences \\
+      \hline
+10201 & Datavetenskap (datalogi) & Computer Sciences \\
+      \hline
+10202 & Systemvetenskap, informationssystem och informatik (samhällsvetenskaplig inriktning under 50804) &
+Information Systems (Social aspects to be 50804)\\
+      \hline
+10203 & Bioinformatik (beräkningsbiologi) (tillämpningar under 10610) & Bioinformatics (Computational Biology) (applications to be 10610) \\
+      \hline
+10204 & Människa-datorinteraktion (interaktionsdesign) (Samhällsvetenskapliga aspekter under 50803) & Human Computer Interaction (Social aspects to be 50803)\\
+      \hline
+10205 & Programvaruteknik & Software Engineering \\
+      \hline
+10206 & Datorteknik & Computer Engineering \\
+      \hline
+10207 & Datorseende och robotik (autonoma system) & Computer Vision and Robotics (Autonomous Systems) \\
+      \hline
+10208 & Språkteknologi (språkvetenskaplig databehandling) & Language Technology (Computational Linguistics) \\
+      \hline
+10209 & Medieteknik & Media and Communication Technology \\
+      \hline
+10299 & Annan data- och informationsvetenskap & Other Computer and Information Science \\
+      \hline
+      \hline
+202   & Elektroteknik och elektronik & Electrical Engineering, Electronic Engineering, Information Engineering \\
+      \hline
+20201 & Robotteknik och automation & Robotics \\
+      \hline
+20202 & Reglerteknik & Control Engineering \\
+      \hline
+20203 & Kommunikationssystem & Communication Systems \\
+      \hline
+20204 & Telekommunikation & Telecommunications \\
+      \hline
+20205 & Signalbehandling & Signal Processing \\
+      \hline
+20206 & Datorsystem & Computer Systems \\
+      \hline
+20207 & Inbäddad systemteknik & Embedded Systems \\
+      \hline
+20299 & Annan elektroteknik och elektronik & Other Electrical Engineering, Electronic Engineering, Information Engineering \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+\FloatBarrier
+
+\subsection{Author configuration of the \LaTeX\ engine}
+\label{sec:latexEngine}
+The template should work with pdflatex, XeLaTeX, and LuaLaTeX.  If you are using Overleaf, I strongly recommend the use of XeLaTeX ---  as this will get the \texttt{Arial} fonts correct for the \gls{tld:KTH} cover. If you are running the compiler on your local machine and you use XeLaTeX \textbf{and} you have \texttt{Arial} as a system font, then it will be able to use it. Similarly, for LuaLaTeX. For pdflatex I have used \textbackslash fontfamily{helvet}, i.e., Helvetica, as it is a sans serif font.
+
+\subsection{Author macros}
+\label{sec:authorMacros}
+It is assumed that there can only be 1 or 2 authors. For many years now 2\textsuperscript{nd} cycle theses are expected to only have one author.
+
+For the author or first author, there are a number of macros defined to store information about the author, so that it can later be used in multiple places (for example, the \gls{tld:KTH} cover (produced with \texttt{\textbackslash kthcover)}, the title page (produced with \texttt{\textbackslash titlepage}, the ``For DIVA'' section at the end of the thesis (produced with 
+\texttt{\textbackslash divainfo\{pg:lastPageofPreface\}\{pg:lastPageofMainmatter\}}), and possibly a file named \texttt{fordiva.json} produced as a by product of the \texttt{\textbackslash divainfo}. Note that the section name has \gls{tld:DiVA} set in all caps - which hopefully should not occur in the thesis!
+
+The author related macros are:
+\begin{description}[leftmargin=!, labelwidth =\widthof{\texttt{\textbackslash secondAuthorsFirstname\{\}}}]
+\item [\texttt{\textbackslash authorsLastname\{\}}] the last name of the author
+
+\item [\texttt{\textbackslash authorsFirstname\{\}}] the first name of the author
+
+\item [\texttt{\textbackslash email\{\}}] the \gls{tld:KTH} e-mail address of the author
+
+\item [\texttt{\textbackslash kthid\{\}}] the author's kthid, this generally start with the string ·``u1'' and is a unique identifier for every \gls{tld:KTH} user.
+
+% As per email from KTH Biblioteket on 2021-06-28 students cannot have an OrCiD reported for their degree project
+\item [\texttt{\textbackslash authorsSchool\{\}}] the value is generally of the form:\linebreak[4] \texttt{\textbackslash schoolAcronym\{EECS\}}. The currently supported school acronyms are: ABE, CBH, EECS, ITM, and SCI. These are defined in the file \texttt{schools\_and\_programs.ins}.
+\end{description}
+
+If the first author is not in Stockholm, Sweden when the acknowledgements are written, then add that information via the macros described below.
+This information will be used when generating the acknowledgements signature. The acknowledgements signature is the text at the end of the acknowledgements and it gives the place where the author(s) is/are when writing the acknowledgements and also gives the date and name(s).
+\begin{description}[leftmargin=!, labelwidth =\widthof{\texttt{\textbackslash secondAuthorsFirstname\{\}}}]
+\item [\texttt{\textbackslash authorCity\{A City\}}] specify the city
+
+\item [\texttt{\textbackslash authorCountry\{A Country\}}] specify the country
+
+\item [\texttt{\textbackslash authorCityCountryDate\{\}}] pass into this function the month and year for the acknowledgement. This can be a string such as January 2022 or it can be a \LaTeX\ expression, such as \textbackslash MONTH\textbackslash enspace\textbackslash the\textbackslash year.
+\end{description}
+
+If there is a second author and the place, month, and year are \textbf{all} the same, then specify the month and year for only the \textbf{first} author:
+\begin{lstlisting}
+\authorCityCountryDate{\MONTH\enspace\the\year}
+\end{lstlisting}
+
+If there is a second author and the place is different, then say:
+\begin{lstlisting}
+\authorCityCountryDate{}
+\end{lstlisting}
+
+If there is a second author, the macros are:
+\begin{description}[leftmargin=!, labelwidth =\widthof{\texttt{\textbackslash secondAuthorsFirstname\{\}}}]
+\item [\texttt{\textbackslash secondAuthorsLastname\{\}}] the last name of the 2\textsuperscript{nd} author
+\item [\texttt{\textbackslash secondAuthorsFirstname\{\}}] the first name of the 2\textsuperscript{nd} author
+\item [\texttt{\textbackslash secondemail\{\}}] the \gls{tld:KTH} e-mail address of the 2\textsuperscript{nd} author
+\item [\texttt{\textbackslash secondkthid\{\}}] the 2\textsuperscript{nd} author's kthid
+% As per email from KTH Biblioteket on 2021-06-28 students cannot have an OrCiD reported for their degree project
+\item [\texttt{\textbackslash secondAuthorsSchool\{\}}] the school of the 2\textsuperscript{nd} author
+\end{description}
+
+If the second author is not in the same place as the first author, then add the relevant information using the macros below.  This information will be used when generating the acknowledgements signature.
+\begin{description}[leftmargin=!, labelwidth =\widthof{\texttt{\textbackslash secondAuthorsFirstname\{\}}}]
+\item [\texttt{\textbackslash secondAuthorCity\{A City\}}]  specify the city
+
+\item [\texttt{\textbackslash secondAuthorCountry\{A Country\}}] specify the country
+
+\item [\texttt{\textbackslash secondAuthorCityCountryDate\{\textbackslash MONTH\textbackslash enspace\textbackslash the\textbackslash year\}}]  pass into this function the month and year for the acknowledgement
+\end{description}
+
+If the second author is the same place as the first author, then comment out or delete the \textbackslash secondAuthorCityCountryDate\{\} as shown below:
+\begin{lstlisting}
+%\secondAuthorCityCountryDate{}
+\end{lstlisting}
+
+\section{Those working in parallel with the authors(s) during the degree project}
+\label{sec:examinerAdvisorsOpponent}
+Those working together with the author(s) during the degree project process include the examiner, supervisor(s), and the opponent(s).
+
+\subsection{Supervisor}
+\label{sec:supervisorMacros}
+If a degree project is done in industry, there is generally an industrial supervisor in addition to the academic supervisor(s). The template supports up to 3 supervisors (typically an academic supervisor, an industrial supervisor, and sometimes an additional academic or industrial supervisor). The choice of up to three reflects my experience and observation of prior theses in \gls{tld:DiVA}. Note that there is expected to be at least one supervisor. The supervisors are enumerated as A, B, and C. For each of A, B, and C as appropriate, replace the "X" in the following macros:
+\begin{description}[leftmargin=!, labelwidth =\widthof{\texttt{\textbackslash secondAuthorsFirstname\{\}}}]
+\item [\texttt{\textbackslash supervisorXsLastname\{\}}] the last name of the supervisor
+\item [\texttt{\textbackslash supervisorXsFirstname\{\}}] the first name of the supervisor
+\item [\texttt{\textbackslash supervisorXsEmail\{\}}] e-mail address of the supervisor
+\end{description}
+
+If the supervisor is from within \gls{tld:KTH}, then add their KTHID, School, and Department info:
+\begin{description}[leftmargin=!, labelwidth =\widthof{\texttt{\textbackslash secondAuthorsFirstname\{\}}}]
+\item [\texttt{\textbackslash supervisorXsKTHID\{\}}] the supervisor's kthid 
+\item [\texttt{\textbackslash supervisorXsSchool\{\}}] the school of the supervisor
+\item [\texttt{\textbackslash supervisorXsDepartment\{\}}] the department of the supervisor
+\end{description}
+
+If the supervisor is from outside of \gls{tld:KTH}, then add their organization with:
+\begin{description}[leftmargin=!, labelwidth =\widthof{\texttt{\textbackslash secondAuthorsFirstname\{\}}}]
+\item [\texttt{\textbackslash supervisorXsOrganization\{\}}] the supervisor's organization
+\end{description}
+
+\subsection{Examiner}
+\label{sec:examinerMacros}
+I assume that there is only a single examiner for a given thesis. For this examiner, the relevant macros are:
+\begin{description}[leftmargin=!, labelwidth =\widthof{\texttt{\textbackslash secondAuthorsFirstname\{\}}}]
+\item [\texttt{\textbackslash examinersLastname\{\}}] the last name of the examiner
+\item [\texttt{\textbackslash examinersFirstname\{\}}] the first name of the examiner
+\item [\texttt{\textbackslash examinersEmail\{\}}] e-mail address of the examiner
+\end{description}
+
+If the examiner is from within \gls{tld:KTH}, then add their KTHID, School, and Department info:
+\begin{description}[leftmargin=!, labelwidth =\widthof{\texttt{\textbackslash secondAuthorsFirstname\{\}}}]
+\item [\texttt{\textbackslash examinersKTHID\{\}}] the examiner's kthid 
+\item [\texttt{\textbackslash examinersSchool\{\}}] the school of the examiner
+\item [\texttt{\textbackslash examinersDepartment\{\}}] the department of the examiner
+\end{description}
+
+If the examiner is from outside of \gls{tld:KTH}, then add their organization with:
+\begin{description}[leftmargin=!, labelwidth =\widthof{\texttt{\textbackslash secondAuthorsFirstname\{\}}}]
+\item [\texttt{\textbackslash examinersOrganization\{\}}] the examiner's organization
+\end{description}
+
+
+I assume that someone (such as the examiner) will generate the file:\linebreak[4] \fname{custom\_configuration.tex}. This assumption is based upon the fact that the examiner knows who the student or students are who will be working in a given degree project, who the supervisor or supervisors are, what program the student is in, course code, \ldots . Ideally this file should be generated automatically by some computer program so that each student or pair of students in a group gets a customized template automatically via the Canvas course. However, currently the file is generated using a command line program (\texttt{create\_customized\_JSON\_file.py}) to generate a \gls{tld:JSON} file. Subsequently, a separate program (\texttt{customize\_LaTeX\_project.py}) takes this \gls{tld:JSON} data and create the appropriate \LaTeX\ commands and inserts this information into the file and then inserts this file into a ZIP file, either replacing or augmenting the \fname{custom\_configuration.tex} within this ZIP file (if one exists). There is an option for this second program \texttt{--initialize} that causes the program to simply replace the file rather than appending the new information to the end of the file.
+
+The above programs are available from \url{https://github.com/gqmaguirejr/E-learning}. The README file for this github contains information about how to run the programs, their options, and gives examples.
+
+\subsection{Opponent(s) and oral presentation}
+\label{sec:opponentMacros}
+Unlike the supervisors and examiner, the macros related to the opponent and oral presentation are in the \fname{examplethesis.tex} file.
+The macro for the opponent(s) is: 
+\begin{description}[leftmargin=!, labelwidth =\widthof{\texttt{\textbackslash secondAuthorsFirstname\{\}}}]
+\item [\texttt{\textbackslash opponentsNames\{\}}] the names (in normal name order) of the opponent or opponents
+\end{description}
+When there are multiple opponents, separate their names with '\textbackslash \&'; for example, A. B. Normal \textbackslash \& A. X. E. Normalè.
+
+For the oral presentation, the following macros are filled in once the examiner has scheduled your oral presentation:
+\begin{description}[leftmargin=!, labelwidth =\widthof{\texttt{\textbackslash presentationDateAndTimeISO\{\}}}]
+\item [\texttt{\textbackslash presentationDateAndTimeISO\{\}}] date and time of the presentation is ISO format, for example: 2022-03-15 13:00
+\item [\texttt{\textbackslash presentationLanguage\{\}}] three letter abbreviation for the language of the presentation according to three letter ISO 639-2 Code – specifically the "B" (bibliographic) variant of these codes (note that this is the same language code used in DiVA), generally eng or swe
+\item [\texttt{\textbackslash presentationRoom\{\}}] a room name and/or\hspace*{\fill}\linebreak[4] ``via Zoom https://kth-se.zoom.us/j/ddddddddddd''
+\item [\texttt{\textbackslash presentationAddress\{\}}] location of the room, for example: Isafjordsgatan 22 (Kistagången 16)
+\item [\texttt{\textbackslash presentationCity\{\}}] city where the presentation occurs, generally: Stockholm
+\end{description}
+
+
+\section{Administrative staff}
+\label{sec:adminStaff}
+
+Once a thesis is approved by the examiner we need to add the TRITA number. The TRITA number is assigned by the student affairs office of the school from an annual series of numbers.
+
+\subsection{What is a TRITA number and why does each approved thesis get assigned one?}
+
+TRITA stands for Transactions for the Royal Institute of Technology, added by the letter "A". The TRITA definition is the 1971 report, "Mall för publikationsserier vid Kungl. Tekniska högskolan i Stockholm", TRITA-LIB-1001, \url{http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-127656}.
+
+The format for TRITA numbers for degree projects is TRITA-$\langle$school acronym$\rangle$-EX-YYYY:nnn, where nnn is a sequential number starting from 1 each year with the numbers assigned in chronological order to approved theses ("numren delas ut kronologiskt först när examinatorn godkänt arbetet." - according to one of KTH's archivists). Note that the list of assigned TRITA numbers is itself archived each year.
+
+The TRITA number value can be set with a macro that takes two arguments: series and year:number as shown below:
+\begin{lstlisting}
+% for entering the TRITA number for a thesis
+\trita{TRITA-EECS-EX}{2022:00}  
+\end{lstlisting}
+
+\subsection{Where does the TRITA number go?}
+The TRITA number will appear on the back cover of the thesis. It is also stored as part of the meta data that is entered into \gls{tld:DiVA}.
+
+\subsection{What does this mean in practice?}
+Currently at EECS the TRITA number is only assigned to the thesis when the examiner has approved the thesis and submitted the PDF of the approved thesis (with cover) to the student affairs office. Of course, this does not actually make a lot of sense because the back cover is already on the thesis! This means that someone in the student affairs office must either \first edit the sequential number part of the TRITA number (using some PDF tool) or \second they need to make a new back cover and replace the existing back cover. A better solution would be to inform the examiner of the TRITA number and the examiner can see that this number is inserted into the macro shown above and this can enable the number to appear on the back cover and as an added bonus be include in the meta data for \gls{tld:DiVA}.
+
+\subsection{Entering the meta data into DiVA}
+If a thesis has used this template the ``For DIVA'' page contains the meta data for \gls{tld:DiVA} and an administrator can cut an paste this data into \gls{tld:DiVA}. Alternatively, this meta data can be extracted with a program from the PDF file to produce a \gls{tld:JSON} file that can subsequently be used to create a MODS file for import into \gls{tld:DiVA}. The \LaTeX\ compiler can in many case produce a file called ``fordiva.json'' that contains the meta data.
+
+The programs that can be used to extract data and to take a \gls{tld:JSON} file and create a MODS file are available from \url{https://github.com/gqmaguirejr/E-learning}.
+
+Note that the import of the MODS file does not import the collaboration data, even though this is in the file. This is a limitation of the \gls{tld:DiVA} import function. Therefore, this information has to be manually entered along with uploading of the PDF file itself.
+
+\section{(Human) Readers of the thesis}
+\label{sec:readers}
+Some theses have very few downloads from \gls{tld:DiVA} while some have had hundreds of thousands of downloads. Therefore, you should keep in mind that you have a wide range of human readers of your thesis. The readers include other students looking for information related to their own thesis or because they are interested in the future work that you have suggested to work on for their own degree project. Additionally, researchers who are looking for your results may find your thesis relevant to them. In many cases companies will look at theses for ideas about what the state of the art is - in a number of cases theses have been important as ``prior art'' and this invalidated patents that had been issued if the patent was submitted after the thesis became public (hence it pays to get theses public as soon as possible). Other human readers are the UKÄ review teams that exam the degree programs offered at \gls{tld:KTH}. Finally, as \gls{tld:KTH} is a public agency it is important that the general public know what is done at \gls{tld:KTH}.
+
+\subsection{Machines reading the metadata or full text of the thesis}
+\label{sec:searchEngines}
+The file \fname{pdf\_related\_includes.tex} contains \LaTeX\ code that stores the title, author(s), and keyword information into the PDF document in such a way that if you ask for the properties of the PDF file you will get this data. This information makes it easier for machines to get this information from the PDF file. 
+
+Additionally, many search engines (such as Google) mine \gls{tld:DiVA} for the meta-data and if the full text of the thesis is published via \gls{tld:DiVA} then they also process the full text of the thesis. The result is that search engines can find the content in these theses.  This is likely to increase the probability that someone will down load your thesis, if they think it is relevant to them - increasing the number of your human readers (see \Cref{sec:readers}).
+
+\subsection{Template author and maintainers}
+\label{sec:maintainer}
+
+\gls{tld:KTH} periodically changes the cover design for theses, introduces new programs of study, eliminates programs of study, reorganizes administratively,
+and faculty move between schools, departments, and divisions. It can be expected that this template will need to evolve with these changes.
+
+For example, if there is a change in schools or programs then there needs to be changes made to the file \texttt{schools\_and\_programs.ins}. While the current file was extracted from \gls{tld:KOPPS}, the program that does this will need to be replaced because further development of \gls{tld:KOPPS} has been terminated by KTH's central IT unit which plans to transition all of this information to \gls{tld:LADOK}.
+
+As another example, on 13 December 2021 there was a change in the \gls{tld:KTH} cover for 1\textsuperscript{st} and 2\textsuperscript{nd} theses and the cover generator web service was shutdown. The initial draft version of the cover used a proprietary font (TheSans B4 SemiLight and TheSans B6 SemiBold). The version that was publicly introduced uses another proprietary font (Arial) and officially only existed as a DOCX file for a thesis in Swedish. The result is that I had to make my own version in \LaTeX\ to try to emulate the DOCX cover. This lead to a lot of effort, but one can get a reasonable cover with the correct font as described in Section \ref{sec:latexEngine}.
+
+\section{While writing}
+As was noted in \Cref{sec:authors} the thesis contains lots of examples, notes, and comments. One method used to provide additional information is the use of \textbackslash todo.A number of different types of todo notes have been used in the thesis. These are described in \Cref{sec:todonotes}.
+
+\subsection{Conventions for todo notes}
+\label{sec:todonotes}
+The example thesis text includes extensive comments, directions, and warnings. These follow the form shown below:
+\begin{lstlisting}
+\todo[inline]{Comments/directions/... in English}
+\todo[inline, backgroundcolor=kth-lightblue40]{Text på svenska}
+\todo[inline, backgroundcolor=kth-lightgreen40]{English descriptions about formatting}
+\todo[inline, backgroundcolor=kth-lightred40]{warning}  
+\end{lstlisting}
+and appear as:
+\todo[inline]{Comments/directions/... in English}
+\todo[inline, backgroundcolor=kth-lightblue40]{Text på svenska}
+\todo[inline, backgroundcolor=kth-lightgreen40]{English descriptions about formatting}
+\todo[inline, backgroundcolor=kth-lightred40]{warning}
+
+\subsection{Removing the README\_notes}
+At some point you will no longer want this README information. You can remove it by removing the line
+\textbackslash include\{README\_notes/README\_notes\} -- from the \fname{examplethesis.tex} file. You can then remove the \dname{README\_notes} directory.
+
+\clearpage
+\printglossary[type=readme,toctitle={README acronyms}]
+\clearpage
